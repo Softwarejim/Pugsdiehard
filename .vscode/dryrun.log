@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/softwarejs/Desktop/isuRe/workspace-isu'
+make: Leaving directory '/home/softwarejs/Desktop/isuRe/workspace-isu'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
