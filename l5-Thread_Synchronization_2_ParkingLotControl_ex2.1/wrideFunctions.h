@@ -28,7 +28,7 @@ void CarDrivesOutOfParkinglot(){
 
 /***********GARAGEDOOR*****************************************/
 void GaragedoorOpens(){
-    cout << "Garageoor opens! " << endl; 
+    cout << "Garagedoor opens! " << endl; 
 }
 void GaragedoorIsOpen(){
     cout << "Garageoor is open! " << endl; 

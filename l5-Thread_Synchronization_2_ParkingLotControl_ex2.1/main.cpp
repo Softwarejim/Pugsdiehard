@@ -12,40 +12,47 @@ pthread_cond_t entrySignal, exitSignal = PTHREAD_COND_INITIALIZER;
 bool entryDoorOpen, exitDoorOpen, carWaitingEntry, carWaitingExit = false;
 
 
-void* CarThreadFunc(void* CarThreadId){
-
-        /************CAR-ENTRY********************/
+void* CarThreadFunc(void* CarThreadId){        
 
     for (;;)
     {
-        pthread_mutex_lock(&carEntryMutex);
+        cout << "/************CAR-ENTRY********************/" << endl;
 
         CarDrivesToEntryGarageDoor();
+
+        pthread_mutex_lock(&carEntryMutex); // LOCK!
+
         carWaitingEntry = true;
+
         pthread_cond_signal(&entrySignal);
+
         while (!entryDoorOpen)
         {
-        CarIsWaitingAtTheEntryGaragedoor();
-        pthread_cond_wait(&entrySignal, &carEntryMutex);
+          CarIsWaitingAtTheEntryGaragedoor();
+          pthread_cond_wait(&entrySignal, &carEntryMutex);
         }
+
         CarDrivesIntoParkinglot();
         carWaitingEntry = false;
         pthread_cond_signal(&entrySignal);
 
-        pthread_mutex_unlock(&carEntryMutex);
+        pthread_mutex_unlock(&carEntryMutex); // UNLOCK!
         sleep(1);
 
-        /************CAR-EXIT********************/
-
-        pthread_mutex_lock(&carExitMutex);
+        cout << "/************CAR-EXIT********************/" << endl;
 
         CarDrivesToExitGarageDoor();
+
+        pthread_mutex_lock(&carExitMutex); // LOCK
+
         carWaitingExit = true;
+
         pthread_cond_signal(&exitSignal);
+
         while (!exitDoorOpen)
         {
-            pthread_cond_wait(&entrySignal, &carEntryMutex);
             CarIsWaitingAtTheExitGaragedoor();
+            pthread_cond_wait(&exitSignal, &carExitMutex);
         }
         CarDrivesOutOfParkinglot();
         carWaitingExit = false;
@@ -59,29 +66,51 @@ void* CarThreadFunc(void* CarThreadId){
 void* EntryGuardThreadFunc(void* EntGuId){
     for (;;)
     {
-        pthread_mutex_lock(&carEntryMutex);
+        pthread_mutex_lock(&carEntryMutex); // LOLCK
+
         while (!carWaitingEntry)
         {
-            pthread_cond_wait(&entrySignal, &carEntryMutex);
-            GaragedoorOpens();
+            pthread_cond_wait(&entrySignal, &carEntryMutex);            
         }
+
+        GaragedoorOpens();
         entryDoorOpen = true;
-        
-        pthread_mutex_unlock(&carEntryMutex);
+        pthread_cond_signal(&entrySignal); 
+
+        while (carWaitingEntry)
+        {
+          pthread_cond_wait(&entrySignal, &carEntryMutex);     
+        }
+
+        GaragedoorClosses();
+        entryDoorOpen = false;
+               
+        pthread_mutex_unlock(&carEntryMutex); // UNLOCK
     }        
 } 
     
 void* ExitGuardThreadFunc(void*  ExiGuId){
     for (;;)
     {
-        pthread_mutex_lock(&carExitMutex);
+        pthread_mutex_lock(&carExitMutex); // LOCK
+
         while (!carWaitingExit)
         {
             pthread_cond_wait(&exitSignal, &carExitMutex);
-            GaragedoorOpens();
         }
-        exitDoorOpen = true;        
-        pthread_mutex_unlock(&carExitMutex);
+
+        GaragedoorOpens();
+        exitDoorOpen = true;
+        pthread_cond_signal(&exitSignal); 
+
+        while (carWaitingExit)
+        {
+          pthread_cond_wait(&exitSignal, &carExitMutex);     
+        }
+        GaragedoorClosses();
+        exitDoorOpen = false;
+
+        pthread_mutex_unlock(&carExitMutex); // UNLOCK
     }                
 }
 pthread_t CarThread;
