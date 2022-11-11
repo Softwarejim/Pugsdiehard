@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Oct 19 15:48:33 2022
+# Make data base, printed on Fri Nov  4 08:04:47 2022
 
 # Variables
 
@@ -33,7 +31,7 @@ QT_ACCESSIBILITY = 1
 # environment
 SNAP_INSTANCE_NAME = code
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/109/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/112/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -49,11 +47,11 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/d
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/softwarejs/.config/Code/CachedData/64bbfbf67ada9953918d72e1df2f4d8e537d340e
+VSCODE_CODE_CACHE_PATH = /home/softwarejs/.config/Code/CachedData/8fa188b2b301d36553cbc9ce1b0a146ccb93351f
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.5MN9T1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.X0GFV1
 # default
 .LOADED := 
 # default
@@ -61,7 +59,7 @@ XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.5MN9T1
 # makefile
 MAKEFLAGS = pqrR
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=66b39bba585c2aa9aac41be4634d5a7a
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=d47a0d529d7a8b339de88ef86364b8fe
 # makefile
 CURDIR := /home/softwarejs/Desktop/isuRe/workspace-isu
 # environment
@@ -91,7 +89,7 @@ SNAP_REEXEC =
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 2456
+VSCODE_PID = 2563
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -99,13 +97,13 @@ XDG_SESSION_TYPE = wayland
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-SESSION_MANAGER = local/softwarejs:@/tmp/.ICE-unix/1240,unix/softwarejs:/tmp/.ICE-unix/1240
+SESSION_MANAGER = local/softwarejs:@/tmp/.ICE-unix/1295,unix/softwarejs:/tmp/.ICE-unix/1295
 # automatic
 *F = $(notdir $*)
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=66b39bba585c2aa9aac41be4634d5a7a
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=d47a0d529d7a8b339de88ef86364b8fe
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
@@ -141,11 +139,11 @@ LANGUAGE = en_US:en
 # environment
 SNAP_USER_COMMON = /home/softwarejs/snap/code/common
 # environment
-SNAP = /snap/code/109
+SNAP = /snap/code/112
 # environment
-INVOCATION_ID = d3375c5372e841dbb3f31c4dbb83e6df
+INVOCATION_ID = 5d457c90a08a481f8eb0b178a4b180ec
 # environment
-SNAP_REVISION = 109
+SNAP_REVISION = 112
 # environment
 SNAP_REAL_HOME = /home/softwarejs
 # environment
@@ -177,7 +175,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 1240
+SYSTEMD_EXEC_PID = 1295
 # environment
 DISPLAY = :0
 # environment
@@ -187,23 +185,23 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-SNAP_DATA = /var/snap/code/109
+SNAP_DATA = /var/snap/code/112
 # environment
 SNAP_CONTEXT = mtGDtFVrQRXY8KFrCObEGwP3Tooyyidf5fci21gB18iWMF2B3HxU
 # environment
-MANAGERPID = 1025
+MANAGERPID = 1145
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2411
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2524
 # environment
-_ = /snap/code/109/usr/share/code/code
+_ = /snap/code/112/usr/share/code/code
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/softwarejs/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:45215
+JOURNAL_STREAM = 8:46325
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -215,11 +213,11 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-d04577bc-1.72.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-d04577bc-1.73.0-main.sock
 # environment
 SNAP_NAME = code
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/109/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/112/usr/share/glib-2.0/schemas
 # environment
 IM_CONFIG_PHASE = 1
 # default
@@ -227,7 +225,7 @@ IM_CONFIG_PHASE = 1
 # automatic
 <F = $(notdir $<)
 # environment
-SNAP_VERSION = 64bbfbf6
+SNAP_VERSION = 8fa188b2
 # default
 SUFFIXES := 
 # environment
@@ -239,7 +237,7 @@ SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # environment
-SNAP_USER_DATA = /home/softwarejs/snap/code/109
+SNAP_USER_DATA = /home/softwarejs/snap/code/112
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -255,15 +253,14 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2051, inode 6295019): 15 files, no impossibilities.
+# . (device 2051, inode 6295019): 17 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
- 
 # Files
 
 # Not a target:
@@ -283,6 +280,9 @@ Makefile:
 all:
 #  Command line target.
 #  Implicit rule search has been done.
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 #  File does not exist.
 #  File has not been updated.
 
@@ -308,12 +308,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 23 / storage = 540 B / avg = 23 B
-# current buf: size = 8162 B / used = 540 B / count = 23 / avg = 23 B
+# strcache buffers: 1 (0) / strings = 25 / storage = 568 B / avg = 22 B
+# current buf: size = 8162 B / used = 568 B / count = 25 / avg = 22 B
 
-# strcache performance: lookups = 26 / hit rate = 11%
+# strcache performance: lookups = 28 / hit rate = 10%
 # hash-table stats:
-# Load=23/8192=0%, Rehash=0, Collisions=0/26=0%
-# Finished Make data base on Wed Oct 19 15:48:33 2022
+# Load=25/8192=0%, Rehash=0, Collisions=0/28=0%
+# Finished Make data base on Fri Nov  4 08:04:47 2022
 
  
